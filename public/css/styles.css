@@ -1,0 +1,133 @@
+body, html {
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 14px;
+    color: #484949;
+    line-height: 18px;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1A9DBA;
+    width: 90%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    border-color: grey;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #484949;
+    word-wrap: normal;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 2px;
+}
+
+table {
+    margin-left: 4%;
+}
+
+button {
+    width: 90px;
+    height: 35px;
+    transform: translateX(60px);
+}
+
+.movie-panel {
+    text-align: center;
+    width: 33%;
+    height: 100%;
+    float: left;
+    margin-left: -8px;
+    margin-top: -10px;
+    box-shadow: 4px 0px 0px 0px #ccc;
+    padding-bottom: 75px;
+    background-color: #eeeeee;
+}
+
+.movie-panel h2 {
+    margin-bottom: 2px;
+}
+.movie-panel p {
+    margin-top: 0px;
+}
+.movie-info-panel {
+    width: 66%;
+    float: right;
+}
+
+.poster {
+    border-radius: 50%;
+    width: 122px;
+    height: 122px;
+}
+
+.movie-title {
+    margin-top: 0px;
+    margin-bottom: 35px;
+    padding-top: 55px;
+}
+
+.movie-poster {
+    width: 174px;
+    height: 262px;
+    margin: 0px 25px 40px 25px;
+}
+
+.bio-content {
+    margin-top: -10px;
+    position: absolute;
+    display: inline-block;
+    padding-right: 7%;
+}
+
+.star {
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    margin-right: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.browse {
+    padding-top: 50px;
+}
+
+.star-profile-main {
+    width: 347px;
+    height: 420px;
+    float: right;
+    margin: 0px 50px 50px 0px;
+}
+
+.movie-container {
+    display: inline-table;
+    width: 150px;
+    margin: 50px 0px 0px 10px;
+}
+
+.active {
+    border: 6px solid;
+    border-color: #1A9DBA;
+}

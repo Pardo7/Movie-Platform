@@ -1,4 +1,10 @@
-<div>
-    <h1>Movies</h1>
-    <p>Here are some movies</p>
+<div class="movie-panel">
+    <h1 class="browse">Browse Movies</h1>
+    <div class="movie-container" ng-repeat="movie in films.movies" ng-init="initialSelection()">
+        <img class="poster" ng-src="{{imageUrl(movie.poster_path)}}"
+             ng-click="selectedFeatureFilm(movie); setActive($index)" ng-class="{ 'active': $index == selectedIndex }">
+        <h2>{{movie.title}}</h2>
+        <p>{{filmDirector($index)}}</p>
+    </div>
+    <button ng-click="moreFilms()">More</button>
 </div>

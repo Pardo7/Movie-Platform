@@ -1,0 +1,43 @@
+<div class="movie-info-panel">
+    <div>
+        <h1 class="movie-title title-space">{{selectedFilm.movie.title}}</h1>
+        <div class="bio-top">
+            <img class="movie-poster" ng-src="{{imageUrl(selectedFilm.movie.poster_path)}}"/>
+            <div class="bio-content">
+                <ul>
+                    <h2>Who made it?</h2>
+                    <li class="bold">Director:</li>
+                    <li>{{selectedFilm.director}}</li>
+                </ul>
+                <ul>
+                    <li class="bold">Writers:</li>
+                    <li ng-repeat="writer in selectedFilm.writers">{{writer.name}}</li>
+                </ul>
+                <ul>
+                    <li class="bold">Stars:</li>
+                    <li ng-repeat="star in selectedFilm.credits">{{star.name}}</li>
+                </ul>
+                <h2>Whats it about?</h2>
+                <p>{{selectedFilm.movie.overview}}</p>
+            </div>
+
+        </div>
+        <h1>Movie Credits</h1>
+        <img class="star-profile-main" ng-src="{{selectedFilm.star}}">
+        <table>
+            <tbody ng-repeat="star in selectedFilm.credits" ng-init="selectedStarPic(0)">
+            <tr>
+                <td>
+                    <img class="star" ng-click="selectedStarPic($index); setActiveStar($index)"
+                         ng-src="{{imageUrl(star.profile_path)}}"
+                         ng-class="{ 'active': $index == selectedStarIndex }"/>
+                </td>
+                <td>
+                    <h2>{{star.name}}</h2>
+                    <p>{{star.character}}</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
