@@ -3,6 +3,7 @@ var app     = module.exports = express();
 var routes  = require('./routes');
 var path    = require('path');
 var morgan  = require('morgan');
+var port    = process.env.PORT || 7070;
 
 // Setting up our environment
 app.set('views', __dirname + '/views');
@@ -20,6 +21,6 @@ app.get('/partials/:name', routes.partials);
 app.get('*', routes.index);
 
 // Starting our application server on port 8080
-app.listen('7070', function() {
+app.listen(port, function() {
    console.log('Server started on port: ' + 7070);
 });
