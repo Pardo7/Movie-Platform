@@ -4,7 +4,6 @@
 
 
 // Showing how to register services
-// In this case it is a simple value service.
 angular.module('movieSite.services', [])
     .factory('movieSiteService', ['$http', function($http) {
 
@@ -30,7 +29,7 @@ angular.module('movieSite.services', [])
         var renderSimilarMovies = function(id) {
             return $http({
                 method: 'GET',
-                url: 'http://api.themoviedb.org/3/movie/' + id + '/similar?api_key=8b05853e33a36859b7c1f0abef6d2c86'
+                url: 'https://api.themoviedb.org/3/movie/' + id + '/similar?api_key=8b05853e33a36859b7c1f0abef6d2c86'
             });
         };
 
